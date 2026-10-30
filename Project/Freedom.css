@@ -1,0 +1,665 @@
+/* ================= VARIABLES ================= */
+
+:root {
+    --saffron: #ff9933;
+    --india-green: #138808;
+    --dark-bg: #1a1a2e;
+    --light-bg: #f8f9fa;
+    --text-dark: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 14px 0;
+    box-shadow: 0 3px 20px rgba(0,0,0,.15);
+}
+
+.navbar-brand {
+    color: var(--saffron) !important;
+    font-weight: 700;
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flag-icon {
+    width: 30px;
+    height: 20px;
+    border-radius: 3px;
+    background: linear-gradient(
+        to bottom,
+        var(--saffron) 33%,
+        white 33%,
+        white 66%,
+        var(--india-green) 66%
+    );
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 8px;
+    transition: .3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--saffron) !important;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+    min-height: 55vh;
+    padding: 150px 0 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
+        url("https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=1600")
+        center/cover;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.page-header p {
+    max-width: 700px;
+    margin: 20px auto;
+    color: #eee;
+    font-size: 1.1rem;
+}
+
+
+/* ================= COMMON ================= */
+
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background: var(--light-bg) !important;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2,
+.section-heading {
+    color: var(--dark-bg);
+    font-weight: 700;
+}
+
+.section-title h2 {
+    font-size: 2.6rem;
+}
+
+.section-title h2 span,
+.section-heading span {
+    color: var(--saffron);
+}
+
+.section-heading {
+    font-size: 2.5rem;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+}
+
+.divider {
+    width: 80px;
+    height: 4px;
+    margin: 15px auto 20px;
+    border-radius: 3px;
+    background: linear-gradient(
+        to right,
+        var(--saffron),
+        var(--india-green)
+    );
+}
+
+.divider-left {
+    margin-left: 0;
+}
+
+
+/* ================= ABOUT IMAGE ================= */
+
+.history-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.15);
+}
+
+
+/* ================= HIGHLIGHT ================= */
+
+.highlight-box {
+    margin-top: 25px;
+    padding: 15px 20px;
+    border-left: 4px solid var(--saffron);
+    background: rgba(255,153,51,.08);
+    font-weight: 600;
+}
+
+.highlight-box i {
+    color: var(--saffron);
+    margin-right: 10px;
+}
+
+
+/* ================= FEATURE ================= */
+
+.feature-box {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 5px 25px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.13);
+}
+
+.feature-box .icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg,var(--saffron),#ff7b00);
+    color: white;
+    font-size: 1.8rem;
+}
+
+.feature-box h4 {
+    font-weight: 700;
+}
+
+.feature-box p {
+    color: #666;
+    font-size: .95rem;
+}
+
+
+/* ================= 1857 ================= */
+
+.year-card {
+    min-height: 320px;
+    padding: 45px 35px;
+    border-radius: 18px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        linear-gradient(rgba(26,26,46,.85),rgba(26,26,46,.92)),
+        url("https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=900")
+        center/cover;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.15);
+}
+
+.year-card span {
+    color: var(--saffron);
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.year-card h3 {
+    font-weight: 700;
+}
+
+.year-card p {
+    color: #ddd;
+}
+
+.mini-stat {
+    background: var(--light-bg);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mini-stat strong {
+    display: block;
+    color: var(--saffron);
+    font-size: 1.2rem;
+}
+
+
+/* ================= FIGHTER CARDS ================= */
+
+.fighter-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 5px 25px rgba(0,0,0,.08);
+    transition: .4s;
+}
+
+.fighter-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
+
+.fighter-image {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background: #eee;
+}
+
+.fighter-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: .5s;
+}
+
+.fighter-card:hover img {
+    transform: scale(1.05);
+}
+
+.fighter-year {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: var(--saffron);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.fighter-card .card-body {
+    padding: 25px;
+}
+
+.fighter-tag {
+    color: var(--india-green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.fighter-card h4 {
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.fighter-card p {
+    color: #666;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn-saffron {
+    background: var(--saffron);
+    color: white;
+    padding: 9px 20px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-saffron:hover {
+    background: #e8872a;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* ================= MOVEMENTS ================= */
+
+.movement-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 5px 25px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.movement-card:hover {
+    transform: translateY(-8px);
+}
+
+.movement-year {
+    color: var(--saffron);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.movement-icon {
+    width: 65px;
+    height: 65px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-bg);
+    color: var(--saffron);
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.movement-card h4 {
+    font-weight: 700;
+}
+
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+    position: relative;
+    max-width: 850px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(
+        var(--saffron),
+        var(--india-green)
+    );
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 50%;
+    position: relative;
+    padding: 10px 40px 35px;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    text-align: right;
+}
+
+.timeline-year {
+    color: var(--saffron);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.timeline-content h4 {
+    font-weight: 700;
+}
+
+.timeline-content p {
+    color: #666;
+    margin: 0;
+}
+
+
+/* ================= EVENTS ================= */
+
+.event-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.event-card:hover {
+    transform: translateY(-7px);
+}
+
+.event-card span {
+    color: var(--saffron);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.event-card i {
+    display: block;
+    font-size: 2rem;
+    color: var(--india-green);
+    margin: 15px 0;
+}
+
+.event-card h4 {
+    font-weight: 700;
+}
+
+.event-card p {
+    color: #666;
+}
+
+
+/* ================= QUOTE ================= */
+
+.quote-section {
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+        url("https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=1600")
+        center/cover fixed;
+}
+
+.quote-section blockquote {
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Georgia,serif;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.quote-section cite {
+    color: var(--saffron);
+    font-weight: 600;
+}
+
+
+/* ================= INDEPENDENCE ================= */
+
+.independence-section {
+    padding: 55px 0;
+    color: white;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        var(--dark-bg),
+        #16213e
+    );
+}
+
+.independence-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--saffron);
+    font-size: 2rem;
+}
+
+.independence-section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.independence-section h2 span {
+    color: var(--saffron);
+}
+
+.independence-section p {
+    max-width: 750px;
+    margin: auto;
+    color: #ddd;
+}
+
+.independence-message {
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+    color: var(--saffron);
+    font-weight: 600;
+}
+
+
+/* ================= LEGACY ================= */
+
+.legacy-card {
+    text-align: center;
+    background: white;
+    padding: 40px 25px;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 5px 25px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.legacy-card:hover {
+    transform: translateY(-7px);
+}
+
+.legacy-card i {
+    font-size: 2.5rem;
+    color: var(--saffron);
+}
+
+.legacy-card h4 {
+    font-weight: 700;
+    margin: 15px 0 10px;
+}
+
+.legacy-card p {
+    color: #666;
+}
+
+
+/* ================= SCROLL ANIMATION ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: .8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        min-height: 50vh;
+        padding: 130px 20px 60px;
+    }
+
+    .page-header h1 {
+        font-size: 2.4rem;
+    }
+
+    .section-title h2,
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .history-image {
+        height: 300px;
+    }
+
+    .year-card span {
+        font-size: 3rem;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 45px;
+        text-align: left;
+    }
+
+    .quote-section blockquote {
+        font-size: 1.5rem;
+    }
+
+    .independence-section h2 {
+        font-size: 2.3rem;
+    }
+}
